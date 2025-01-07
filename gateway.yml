@@ -1,0 +1,46 @@
+server:
+  port: 8222
+spring:
+  application:
+    name: gateway
+  cloud:
+    #K8
+    kubernetes:
+      discovery:
+        enabled: true
+      config:
+        enabled: true
+    gateway:
+      routes:
+        - id: students
+          #K8
+          uri: http://student:8090
+          #Docker
+          #uri: lb://student
+          predicates:
+            - Path=/api/v1/students/**
+        - id: schools
+          #K8
+          uri: http://school:8070
+          #Docker
+          #uri: lb://school
+          predicates:
+            - Path=/api/v1/schools/**
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    tags:
+      application: ${spring.application.name}
+  zipkin:
+    tracing:
+      endpoint: http://zipkin:9411/api/v2/spans
