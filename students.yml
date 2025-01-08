@@ -16,14 +16,12 @@ spring:
   flyway:
     enabled: true
     locations: classpath:db/migration
-  #K8
   cloud:
     kubernetes:
       discovery:
         enabled: true
       config:
         enabled: true
-
 management:
   tracing:
     sampling:
@@ -41,9 +39,8 @@ management:
   zipkin:
     tracing:
       endpoint: http://zipkin:9411/api/v2/spans
-
 chaos-engineering:
-  wait: false
+  wait: true
   duration: 10
   kill-service: false
   return-500: false
