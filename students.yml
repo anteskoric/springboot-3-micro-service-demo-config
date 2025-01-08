@@ -46,3 +46,4 @@ chaos-engineering:
   return-500: false
   return-400: false
   return-429: false
+duration: 10
