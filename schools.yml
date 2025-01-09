@@ -16,18 +16,15 @@ spring:
   flyway:
     enabled: true
     locations: classpath:db/migration
-  #K8
   cloud:
     kubernetes:
       discovery:
         enabled: true
       config:
         enabled: true
-
 application:
   config:
-    students-url: http://student:8090/api/v1/students  # Use the Docker service name
-
+    students-url: http://wrong_url
 management:
   tracing:
     sampling:
@@ -45,7 +42,6 @@ management:
   zipkin:
     tracing:
       endpoint: http://zipkin:9411/api/v2/spans
-
 resilience:
   feature: none
   fallback-mocks:
