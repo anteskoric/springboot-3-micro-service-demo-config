@@ -45,4 +45,4 @@ chaos-engineering:
   kill-service: false
   return-500: false
   return-400: false
-  return-429: true
+  return-429: false
