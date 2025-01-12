@@ -24,7 +24,7 @@ spring:
         enabled: true
 application:
   config:
-    students-url: http://student:8090/api/v1/students
+    students-url: http://wrong_url
 management:
   tracing:
     sampling:
@@ -46,3 +46,10 @@ resilience:
   feature: none
   fallback-mocks:
     exampleFallback: '{"example": "example"}'
+logging:
+  level:
+    com:
+      alibou:
+        school:
+          client:
+            StudentClient: DEBUG
