@@ -41,7 +41,7 @@ management:
       endpoint: http://zipkin:9411/api/v2/spans
 chaos-engineering:
   wait: true
-  duration: 10000
+  duration: 20000
   kill-service: false
   return-500: false
   return-400: false
