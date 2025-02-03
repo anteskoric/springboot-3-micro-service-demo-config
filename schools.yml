@@ -46,6 +46,8 @@ resilience:
   feature: fallback
   fallback-mocks:
     exampleFallback: '{"example": "example"}'
+    findSchoolsWithStudents: '{ "name": "Doe", "email": "john.doe@example.com", "students":
+      [] }'
 logging:
   level:
     com:
