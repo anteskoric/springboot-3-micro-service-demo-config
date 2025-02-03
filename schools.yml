@@ -48,6 +48,8 @@ resilience:
     exampleFallback: '{"example": "example"}'
     findSchoolsWithStudents: '{ "name": "Doe", "email": "john.doe@example.com", "students":
       [] }'
+    findAllStudentsBySchool: '{ "name": "Doe", "email": "john.doe@example.com", "students":
+      [] }'
 logging:
   level:
     com:
