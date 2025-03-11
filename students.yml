@@ -43,6 +43,6 @@ chaos-engineering:
   wait: false
   duration: 60000
   kill-service: false
-  return-500: true
+  return-500: false
   return-400: false
   return-429: false
