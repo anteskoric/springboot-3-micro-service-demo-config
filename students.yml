@@ -42,7 +42,7 @@ management:
 chaos-engineering:
   wait: false
   duration: 60000
-  kill-service: false
+  kill-service: true
   return-500: false
   return-400: false
   return-429: false
