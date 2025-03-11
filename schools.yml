@@ -43,14 +43,16 @@ management:
     tracing:
       endpoint: http://zipkin:9411/api/v2/spans
 resilience:
-  feature: none
+  feature: fallback
   fallback-mocks:
     exampleFallback: '{"example": "example"}'
     findSchoolsWithStudents: '{ "name": "Doe", "email": "john.doe@example.com", "students":
       [] }'
-    findAllStudentsBySchool: '{ "name": "Doe", "email": "john.doe@example.com", "students":
-      [] }'
-    purchaseProducts: '[{ "productId": 1, "quantity": 2.0}]'
+    findAllStudentsBySchool: '[{ "id": 1, "firstname": "John", "lastname": "Doe",
+      "email": "john.doe@example.com", "schoolId": 1}]'
+    purchaseProducts: '[{ "productId": 1, "name": "Wireless Headphones", "description":
+      "High-quality wireless headphones with noise cancellation", "price": 199.99,
+      "quantity": 2 }]'
 logging:
   level:
     com:
