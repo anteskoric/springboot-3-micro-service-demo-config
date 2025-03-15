@@ -1,5 +1,5 @@
 server:
-  port: 8090
+  port: -999999999.0
 spring:
   application:
     name: students
